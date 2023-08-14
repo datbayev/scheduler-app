@@ -1,3 +1,11 @@
+To install the app quickly, use following docker image:
+
+`docker pull adatbayev/scheduler-app`
+
+To run the app locally, use following command with port forwarding:
+
+`docker run -p 5000:5000`
+
 This is a simple `flask` application
 
 It has two primary endpoints:
