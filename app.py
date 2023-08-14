@@ -7,19 +7,6 @@ from flask import Flask, request, g
 from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from apscheduler.schedulers.background import BackgroundScheduler
 
-# this is a simple `flask` application
-# it has two primary endpoints:
-# /timers/ POST(url, hours, minutes, seconds) - should schedule hitting given url after given amount of time
-# /timers/<timer_id> GET - should return amount of seconds left until the execution
-
-# timezone related calculations are performed in UTC for standartization sake
-# data is stored in SQLite for simplicity and portability
-# `apscheduler` library is used for timer jobs scheduling purposes
-# `requests` library is used for making http requests
-# `SQLAlchemy` library for apscheduler <> sqlite
-# storing jobs in SQLite as well for persistence purposes
-
-
 app = Flask(__name__)
 DATABASE = os.path.join(app.root_path, 'db', 'sqlite.db')
 
