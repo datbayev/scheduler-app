@@ -32,3 +32,11 @@ For simplicity and portability purposes SQLite was chosen as a storage. You can 
 ### Containers
 
 For velocity purposes it was decided to drop the containerization as there were python libraries version compatibility issues.
+
+### Further work
+
+There is a bit of room for further improvement:
+1) containerization
+2) ORM
+
+First one would ensure portability and easy installation, second one would enhance flexibility and easier code maintenance with database related business logic
