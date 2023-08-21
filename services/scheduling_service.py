@@ -19,7 +19,7 @@ def schedule_new_job(url, timer_id, time_to_call_back):
 
 
 def job_callback(url, timer_id):
-    url_to_hit = url
+    url_to_hit = "http://127.0.0.1:5000/timers/ping" if config.DEBUG else url
 
     if url[-1] != '/':
         url_to_hit += '/'

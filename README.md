@@ -16,6 +16,7 @@ Few important notes:
 - input is validated on the controller layer and only valid data is passed through to the service layer
 - exceptions are caught as much as it's possible on controller layer for better error handling and more descriptive error for users
 - configurations are stored in [config.py](config.py) file
+- there's an `/timers/ping/<ping_id>` endpoint for testing purposes to validate that scheduled jobs indeed do hit the url
 - Timezone related calculations are performed in UTC for standartization sake
 - data of the scheduled jobs is stored in SQLite, it was chosen for simplicity and portability
 - `apscheduler` library is used for timer jobs scheduling

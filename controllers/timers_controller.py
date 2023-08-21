@@ -10,6 +10,10 @@ from exceptions.record_not_found_error import RecordNotFoundError
 from services import db_service, scheduling_service
 
 
+def ping(ping_id):
+    return {'status': 'OK', 'message': f'Ping id {ping_id} is successful!'}, 200
+
+
 def set_timer():
     # Parse and validate input parameters first
     url = request.json.get('url')  # the url that we'd like to hit once the timer is over
